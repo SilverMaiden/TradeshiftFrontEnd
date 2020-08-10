@@ -1,15 +1,15 @@
 .formStyles {
+    margin-top: 6%;
     width: 100%;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    border: solid pink 2px;
 }
 
 .rowStyles {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
-    border: solid pink 2px;
-    width: 50%;
+    justify-content: center;
+    width: 70%;
+    //border: pink solid 2px;
 }

@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
 import {
   InputGroupButtonDropdown,
   DropdownToggle,
@@ -18,20 +20,24 @@ const DropDown = (props) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const toggleDropDown = () => setDropdownOpen(!dropdownOpen);
 
+
+
+
   return (
     <Col md={2}>
-        <FormGroup>
-            <InputGroupButtonDropdown isOpen={dropdownOpen} toggle={toggleDropDown}>
-            <DropdownToggle caret>
-                {props.formValue}
-            </DropdownToggle>
-            <DropdownMenu>
-              {Countries.map((country) => (
-                <DropdownItem onClick={props.handleChange}>{country.code}</DropdownItem>
-              ))}
-            </DropdownMenu>
-            </InputGroupButtonDropdown>
-        </FormGroup>  
+      <FormGroup>
+      <InputGroupButtonDropdown isOpen={dropdownOpen} toggle={toggleDropDown}>
+      <DropdownToggle caret style={{width: "100%"}}>
+          {props.formValue}
+      </DropdownToggle>
+      <DropdownMenu>
+        {props.countries.map((country) => (
+          <DropdownItem onClick={props.handleChange}>{country.alpha2Code}</DropdownItem>
+        ))}
+      </DropdownMenu>
+      </InputGroupButtonDropdown>
+  </FormGroup>  
+
     </Col>
   );
 }
