@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
 
 import {
   InputGroupButtonDropdown,
@@ -12,16 +11,13 @@ import {
 
  import './DropDown.scss';
 
- import Countries from '../../assets/countries.json';
+ //import Countries from '../../assets/countries.json';
 
 
 const DropDown = (props) => {
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const toggleDropDown = () => setDropdownOpen(!dropdownOpen);
-
-
-
 
   return (
     <Col md={2}>
