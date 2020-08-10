@@ -1,0 +1,34 @@
+.cardsContainer {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    width: 46vw;
+    border: solid grey 1px;
+    border-radius: 5px;
+    flex-flow: column nowrap;
+    align-items: center;
+    max-height: 50%;
+    overflow-y: scroll;
+}
+.modalBodyStyling {
+    display: flex;
+    flex-flow: column nowrap;
+    
+}
+.cardStyling {
+    width: 80%;
+    height: 100%;
+    padding-bottom: 5%;
+    margin-bottom: 0.5%;
+}
+.cardStyling:hover {
+    background-color: lightblue;
+    cursor: pointer;
+}
+.searchResultsContainer {
+    //border: solid blue 2px;
+    width: 100vw;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
